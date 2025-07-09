@@ -1,12 +1,21 @@
 package in.lazymanstudios.uri_to_file;
 
+import android.content.ContentResolver;
 import android.content.Context;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
+import android.provider.DocumentsContract;
 import androidx.annotation.NonNull;
+import androidx.core.content.FileProvider;
 import in.lazymanstudios.uri_to_file.model.MethodResultWrapper;
 import in.lazymanstudios.uri_to_file.model.UriToFile;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
-
+import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
+import io.flutter.plugin.common.MethodChannel.Result;
+import java.io.File;
 
 public class UriToFileMethodHandler implements MethodChannel.MethodCallHandler {
   private final UriToFile model;
