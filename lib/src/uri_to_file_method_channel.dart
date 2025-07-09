@@ -23,6 +23,7 @@ class MethodChannelUriToFile extends UriToFilePlatform {
     return false;
   }
 
+  @override
   Future<Uri?> toContentUri(String path) async {
     try {
       final String? uriString = await methodChannel.invokeMethod('toContentUri', {'path': path});
