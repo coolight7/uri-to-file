@@ -31,6 +31,10 @@ abstract class UriToFilePlatform extends PlatformInterface {
     throw UnimplementedError('isUriSupported() has not been implemented.');
   }
 
+  Future<Uri> toContentUri(String path) {
+    throw UnimplementedError('toFile() has not been implemented.');
+  }
+
   /// Convert Uri to file
   Future<File> toFile(String uriString) {
     throw UnimplementedError('toFile() has not been implemented.');
